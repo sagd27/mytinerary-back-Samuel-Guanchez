@@ -7,3 +7,9 @@ para le ejecucion correcta de este servidor es necesaria la ejecución de los si
 - npm install mongoose
 - npm i cors
 - npm i morgan 
+
+Tambien es requerido crear un archivo ".env" que tendra que contener las siguientes variables de entorno :
+
+POST = 8080
+URI_MONGO = "direccion entregada en la plataforma"
+ 
