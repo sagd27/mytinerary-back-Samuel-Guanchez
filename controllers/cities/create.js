@@ -1,6 +1,6 @@
 import City from "../../models/City.js"
 
-let create = async (req, res)=>{
+let create = async (req, res, next)=>{
         try {
                 let city = req.body
                 let all= await City.create(city)
@@ -9,9 +9,7 @@ let create = async (req, res)=>{
                         response: all
                 })
         } catch (error) {
-                return res.status(500).json({
-                        response: error
-                })
+                next(error)
         }
 }
 
