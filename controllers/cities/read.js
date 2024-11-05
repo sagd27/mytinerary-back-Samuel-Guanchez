@@ -1,4 +1,3 @@
-import { response } from "express";
 import City from "../../models/City.js";
 
 let allCities = async (req, res, next) => {

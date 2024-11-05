@@ -1,17 +1,15 @@
-import City from "../../models/City.js"
+import Itinerary from "../../models/Itinerary.js"
+
 
 let create = async (req, res, next)=>{
         try {
-                let city = req.body
-                let all= await City.create(city)
-            
+                let itinerary = req.body
+                let all= await Itinerary.create(itinerary)
+
                 return res.status(201).json({
                         response: all
-
                 })
         } catch (error) {
-         
-                
                 next(error)
         }
 }
