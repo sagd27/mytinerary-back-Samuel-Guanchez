@@ -26,9 +26,10 @@ server.use(cors())
 
 
 
- server.use(not_fount_handler)
 
  server.use(error_400_handler)
+ 
+ server.use(not_fount_handler)
  
  server.use(error_handler)
 

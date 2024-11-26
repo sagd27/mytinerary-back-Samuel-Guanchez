@@ -1,6 +1,6 @@
 import User from "../../models/User.js";
 
-let signin =  async (req, res, next) => {
+export let signin =  async (req, res, next) => {
  
         try {
  
@@ -29,4 +29,12 @@ let signin =  async (req, res, next) => {
         }
 
 }
-export default signin;
+
+export const captureToken = async (req, res, next) => {
+        
+        return res.status(200).json({
+                user: req.user,
+              
+        })
+
+}
